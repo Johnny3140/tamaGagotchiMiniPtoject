@@ -1,5 +1,5 @@
 // alert('test')
-
+//123
 const tamagotchi = {
     name: "Tamagotchi",
     hunger: 20,
