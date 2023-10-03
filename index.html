@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tamagotchi Game</title>
+</head>
+<body>
+    <div class="rules-box">
+        <h2>Game Rules</h2>
+        <p>Welcome to the Tamagotchi game! Here are the rules:</p>
+        <ul>
+            <li>Take care of your pet to ensure a long happy life.</li>
+            <li>Keep an eye on its food, happiness. and sleep levels.</li>
+            <li>If any  level of your pets food, happiness, or sleep level reaches 0 your pet will die. </li>
+            <li>Have fun and enjoy taking care of your virtual pet!</li>
+        </ul>
+    </div>
+    <div class="tamagotchi">
+        <div class="status">
+            <p>Name: <span id="name">Tamagotchi</span></p>
+            <p>Hunger: <span id="hunger">20</span></p>
+            <p>Happiness: <span id="happiness">20</span></p>
+            <p>Sleepiness: <span id="sleepiness">20</span></p>
+        </div>
+        <div class="buttons">
+            <button id="feed">Feed</button>
+            <button id="play">Play</button>
+            <button id="sleep">Sleep</button>
+        </div>
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+</html>

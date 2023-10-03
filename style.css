@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background:linear-gradient(to top, #00a2b1, #1ef2dd);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.tamagotchi {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.status {
+    font-size: 18px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #2ecc71; /* Greenish color for the button */
+    color: #fff; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.rules-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.rules-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.rules-box p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.rules-box ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.rules-box li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
