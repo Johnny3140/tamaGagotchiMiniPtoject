@@ -112,8 +112,7 @@ function sleep() {
     checkEndGame();
     updateStatus();
 }
-const decreaseInterval = 4000; // Interval in milliseconds (2 seconds)
-
+const decreaseInterval = 4000; 
 function decreaseLevels() {
     // Decrease food, sleep, and boredom levels
     tamagotchi.hunger -= 2;
@@ -135,7 +134,7 @@ function decreaseLevels() {
     updateStatus();
 }
 
-// Set up the interval to decrease levels every 2 seconds
+// Set up the interval to decrease levels 
 setInterval(decreaseLevels, decreaseInterval);
 
 
