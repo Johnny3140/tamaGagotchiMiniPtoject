@@ -9,7 +9,7 @@ const tamagotchi = {
 
 };
 
-    let issleeping = false;
+    let isSleeping = false;
 function updateStatus() {
     document.getElementById("name").textContent = tamagotchi.name;
     document.getElementById("hunger").textContent = tamagotchi.hunger;
@@ -23,9 +23,9 @@ function checkEndGame() {
     }
 }
 function toggleSleep(){
-    issleeping = !issleeping;
+    isSleeping = !isSleeping;
     const body = document.body;
-    if (issleeping){
+    if (isSleeping){
         body.classList.add("gradient-background");
     }else{
         body.classList.remove("gradient-background");
