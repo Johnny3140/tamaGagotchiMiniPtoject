@@ -9,6 +9,7 @@ const tamagotchi = {
 
 };
 
+    let issleeping = false;
 function updateStatus() {
     document.getElementById("name").textContent = tamagotchi.name;
     document.getElementById("hunger").textContent = tamagotchi.hunger;
@@ -20,6 +21,16 @@ function checkEndGame() {
         alert(` ${petName} has died R.I.P!`);
         // You can also reset the game or perform other actions here.
     }
+}
+function toggleSleep(){
+    issleeping = !issleeping;
+    const body = document.body;
+    if (issleeping){
+        body.classList.add("gradient-background");
+    }else{
+        body.classList.remove("gradient-background");
+    }
+    updateStatus();
 }
 
 function feed() {
@@ -69,7 +80,7 @@ function sleep() {
 }
 
 
-let petName = prompt("Enter a name for your pet:");
+let petName = prompt("Enter a name for your pet to begin playing:");
 if(petName){
  tamagotchi.name = petName;
 }
@@ -77,4 +88,5 @@ if(petName){
 document.getElementById("feed").addEventListener("click", feed);
 document.getElementById("play").addEventListener("click", play);
 document.getElementById("sleep").addEventListener("click", sleep);
+document.getElementById('sleep').addEventListener("click", toggleSleep)
 updateStatus();

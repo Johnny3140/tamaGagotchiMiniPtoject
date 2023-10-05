@@ -69,3 +69,9 @@ button {
     margin-bottom: 5px;
 }
 
+.gradient-background {
+    background: linear-gradient(to top, #000000, #666666);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
