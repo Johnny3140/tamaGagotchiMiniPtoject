@@ -88,11 +88,10 @@ function sleep() {
     updateStatus();
 }
 
-
-let petName = prompt("Enter a name for your pet to begin playing:");
-if(petName){
- tamagotchi.name = petName;
-}
+let petName = 'Tamagotchi';
+petName = prompt("Enter a name for your pet to begin playing")
+tamagotchi.name = petName;
+document.getElementById("name").textContent = tamagotchi.name;
 
 document.getElementById("feed").addEventListener("click", feed);
 document.getElementById("play").addEventListener("click", play);
