@@ -12,8 +12,10 @@ let currentStage = "egg"; // Initialize the current stage as "egg"
 function evolve() {
     if (tamagotchi.age === 0) {
         currentStage = "egg";
+        
     } else if (tamagotchi.age >= 3 && tamagotchi.age < 6) {
         currentStage = "child";
+        
     } else if (tamagotchi.age >= 6) {
         currentStage = "teen";
     }
@@ -38,7 +40,7 @@ function updateAge() {
    evolve();
    updateStatus();
 }
-const ageInterval = setInterval(updateAge, 15000);
+const ageInterval = setInterval(updateAge, 5000);
     let isSleeping = false;
 function updateStatus() {
     document.getElementById("name").textContent = tamagotchi.name;
