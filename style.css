@@ -79,7 +79,7 @@ button {
 .image-container img{
     margin-top: 100px;
     max-width: 200px;
-    animation: shake 1.38s ease-in-out infinite; /* Adjust the duration and timing function as needed */
+    animation: shake 1.38s ease-in-out infinite; 
   }
   
 
@@ -95,3 +95,24 @@ button {
   }
   
   
+ /* Define the animation for moving from left to right and reappearing */
+@keyframes moveRight {
+    0%, 100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(100%);
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the child and teen images */
+#child, #teen {
+    animation: moveRight 4s linear infinite; 
+}
+
+#teen {
+    max-width: 400px; 
+    animation: moveRight 4s linear infinite; 
+}
