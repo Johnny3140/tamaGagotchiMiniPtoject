@@ -5,16 +5,24 @@ const tamagotchi = {
     hunger: 20,
     happiness: 20,
     sleepiness: 20,
+    age: 0,
 
 
 };
+function updateAge() {
+    tamagotchi.age++; // Increment the age
+    document.getElementById("age").textContent = tamagotchi.age; // Update the displayed age
+    document.getElementById("age").textContent = tamagotchi.age;
 
+}
+const ageInterval = setInterval(updateAge, 15000);
     let isSleeping = false;
 function updateStatus() {
     document.getElementById("name").textContent = tamagotchi.name;
     document.getElementById("hunger").textContent = tamagotchi.hunger;
     document.getElementById("happiness").textContent = tamagotchi.happiness;
     document.getElementById("sleepiness").textContent = tamagotchi.sleepiness;
+    document.getElementById('age').textContent = tamagotchi.age
 }
 function checkEndGame() {
     if (tamagotchi.hunger <= 0 || tamagotchi.happiness <= 0 || tamagotchi.sleepiness <= 0) {
@@ -90,4 +98,4 @@ document.getElementById("feed").addEventListener("click", feed);
 document.getElementById("play").addEventListener("click", play);
 document.getElementById("sleep").addEventListener("click", sleep);
 document.getElementById('sleep').addEventListener("click", toggleSleep)
-updateStatus();
+// updateStatus();
