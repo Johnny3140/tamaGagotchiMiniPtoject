@@ -6,16 +6,38 @@ const tamagotchi = {
     happiness: 20,
     sleepiness: 20,
     age: 0,
-
-
 };
+let currentStage = "egg"; // Initialize the current stage as "egg"
+
+function evolve() {
+    if (tamagotchi.age === 0) {
+        currentStage = "egg";
+    } else if (tamagotchi.age >= 3) {
+        currentStage = "child";
+    } else if (tamagotchi.age >= 6) {
+        currentStage = "teen";
+    }
+
+    // Hide all stages first
+    document.getElementById("egg").style.display = "none";
+    document.getElementById("child").style.display = "none";
+    document.getElementById("teen").style.display = "none";
+
+    // Display the current stage
+    document.getElementById(currentStage).style.display = "inline";
+}
+
+// Call the evolve function initially to set the correct stage
+evolve();
+
 function updateAge() {
     tamagotchi.age++; // Increment the age
     document.getElementById("age").textContent = tamagotchi.age; // Update the displayed age
     document.getElementById("age").textContent = tamagotchi.age;
-
+   evolve();
+   updateStatus();
 }
-const ageInterval = setInterval(updateAge, 15000);
+const ageInterval = setInterval(updateAge, 10000);
     let isSleeping = false;
 function updateStatus() {
     document.getElementById("name").textContent = tamagotchi.name;
