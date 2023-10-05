@@ -30,6 +30,7 @@ function toggleSleep(){
     }else{
         body.classList.remove("gradient-background");
     }
+    
     updateStatus();
 }
 

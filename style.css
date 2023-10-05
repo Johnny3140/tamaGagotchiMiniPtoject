@@ -75,3 +75,8 @@ button {
     background-attachment: fixed;
     
 }
+
+.image-container img{
+    margin-top: 100px;
+    max-width: 200px;
+}
