@@ -112,6 +112,32 @@ function sleep() {
     checkEndGame();
     updateStatus();
 }
+const decreaseInterval = 4000; // Interval in milliseconds (2 seconds)
+
+function decreaseLevels() {
+    // Decrease food, sleep, and boredom levels
+    tamagotchi.hunger -= 2;
+    tamagotchi.sleepiness -= 2;
+    tamagotchi.happiness -= 2;
+
+    // Ensure attribute levels stay within valid ranges
+    if (tamagotchi.hunger < 0) {
+        tamagotchi.hunger = 0;
+    }
+    if (tamagotchi.sleepiness < 0) {
+        tamagotchi.sleepiness = 0;
+    }
+    if (tamagotchi.happiness < 0) {
+        tamagotchi.happiness = 0;
+    }
+
+    // Update the status display
+    updateStatus();
+}
+
+// Set up the interval to decrease levels every 2 seconds
+setInterval(decreaseLevels, decreaseInterval);
+
 
 let petName = 'Tamagotchi';
 petName = prompt("Enter a name for your pet to begin playing")
