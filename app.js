@@ -69,7 +69,10 @@ function toggleSleep(){
 
 function feed() {
     tamagotchi.hunger += 10;
-    if (tamagotchi.happiness > 100) {
+    if (tamagotchi.hunger > 100) {
+        tamagotchi.hunger = 100;
+    }
+    if (tamagotchi.happiness > 100){
         tamagotchi.happiness = 100;
     }
     if (tamagotchi.hunger < 0) {
@@ -137,7 +140,6 @@ function decreaseLevels() {
     if (tamagotchi.happiness < 0) {
         tamagotchi.happiness = 0;
     }
-
     // Update the status display
     updateStatus();
 }
